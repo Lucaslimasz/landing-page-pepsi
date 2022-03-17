@@ -6,7 +6,7 @@
   border: 0;
 }
 
-:root{
+:root {
   --text: #fff;
 
   --blue: #0062be;
@@ -15,10 +15,18 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  padding: 0 3rem;
+  font-family: "Roboto", sans-serif;
   color: var(--text);
   background: var(--blue);
+  max-width: 78.125rem;
+  margin: auto;
+  padding: 0 3rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
 }
 
 @media (max-width: 1080px) {
@@ -33,15 +41,14 @@ body {
   }
 }
 
-header{
+header {
   display: flex;
   justify-content: space-between;
-  padding: 1.4rem 0;
-  align-items: center;
+  padding-top: 2rem;
 }
 
 header img {
-  width: 4rem;
+  width: 5.5rem;
 }
 
 header ul {
@@ -52,6 +59,100 @@ header ul li {
   font-weight: 500;
 }
 
-header ul li+li {
-  margin-left: 1rem;
+header ul li + li {
+  margin-left: 4rem;
+}
+
+.content {
+  width: 100%;
+  height: calc(100vh - 6.1rem - 71px);
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.content .informations {
+  width: 50%;
+}
+
+.content .informations span {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.content .informations h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 9.375rem;
+}
+
+.content .informations button {
+  padding: 0.625rem 1.25rem;
+  font-size: 1.125rem;
+  border-radius: 1.25rem;
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: rgb(82, 82, 82);
+  text-transform: uppercase;
+  background: #cdcdcd;
+}
+
+.selectColor {
+  display: flex;
+
+  position: absolute;
+
+  bottom: 0.875rem;
+  left: 43%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.selectColor button {
+  margin: 0 1rem;
+  position: relative;
+}
+
+.selectColor button:hover {
+  bottom: 26px;
+}
+.selectColor button img {
+  width: 2.5rem;
+}
+
+@media (max-width: 850px){
+  header ul {
+    display: none;
+  }
+
+  .containerImage {
+    display: none;
+  }
+  .content .informations {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px){
+  .content {
+    padding-bottom: 10rem;
+    align-items: center;
+  }
+
+  .selectColor {
+    left: 40%;
+  }
+
+  .content .informations span {
+    font-size: 2.5rem;
+  }
+  
+  .content .informations h1 {
+    font-size: 7rem;
+  }
+  
 }
